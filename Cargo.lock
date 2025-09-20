@@ -9,6 +9,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2fd1289c04a9ea8cb22300a459a72a385d7c73d3259e2ed7dcb2af674838cfa9"
 
 [[package]]
+name = "checked_sum"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "00760565b60de095bdce50e02bdf317ae69371909eee8a20d682a4bad578e5ee"
+
+[[package]]
 name = "getrandom"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -92,6 +98,7 @@ dependencies = [
 name = "rust-checked-maths"
 version = "0.1.0"
 dependencies = [
+ "checked_sum",
  "rand",
 ]
 
