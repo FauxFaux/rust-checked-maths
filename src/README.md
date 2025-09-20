@@ -1,24 +1,22 @@
-# why so slow?
+# How slow is rust checked maths?
 
 Macbook Pro M3 Max 64GB.
-
-This is not even checked maths yet, just rust being slow.
 
 Rust:
 
 ```
-aaron@MacBook-Pro rust-checked-maths % cargo run --release
+aaron@MacBook-Pro rust-checked-maths % cargo run --release                                                 
    Compiling rust-checked-maths v0.1.0 (/Users/aaron/codebases/rust-checked-maths)
-    Finished `release` profile [optimized] target(s) in 0.37s
+    Finished `release` profile [optimized] target(s) in 0.36s
      Running `target/release/rust-checked-maths`
-rand ints generated in: 6.018982s
-sum calculated in: 6.373761s
-sum: -1819101216
+rand ints generated in: 6.17595s
+sum calculated in: 202.57ms
+sum: 4476143
 -----------------------------------
 i64
-rand ints generated in: 9.485157s
-sum calculated in: 10.178395s
-sum: 499996939362828
+rand ints generated in: 9.34796s
+sum calculated in: 421.048ms
+sum: 500005883205017
 aaron@MacBook-Pro rust-checked-maths % 
 ```
 

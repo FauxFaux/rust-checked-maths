@@ -7,6 +7,7 @@ fn main() {
         .map(|_| rand::rng().random_range(1..=1000000))
         .collect();
     println!("rand ints generated in: {:?}", now.elapsed().unwrap());
+    let now = SystemTime::now();
     let s = arr.into_iter().sum::<i32>();
     println!("sum calculated in: {:?}", now.elapsed().unwrap());
     println!("sum: {:?}", s);
@@ -18,6 +19,7 @@ fn main() {
         .map(|_| rand::rng().random_range(1..=1000000))
         .collect();
     println!("rand ints generated in: {:?}", now.elapsed().unwrap());
+    let now = SystemTime::now();
     let s = arr.into_iter().sum::<i64>();
     println!("sum calculated in: {:?}", now.elapsed().unwrap());
     println!("sum: {:?}", s)
