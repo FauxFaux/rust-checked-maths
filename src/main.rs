@@ -1,5 +1,6 @@
 use checked_sum::CheckedSum;
 use rand::Rng;
+use rayon::prelude::*;
 use std::time::SystemTime;
 
 fn main() {
@@ -9,6 +10,7 @@ fn main() {
     println!("i32");
     let now = SystemTime::now();
     let arr_i32: Vec<i32> = (1..=1_000_000_000)
+        .into_par_iter()
         .map(|_| rand::rng().random_range(1..=1000000))
         .collect();
     println!("rand ints generated in: {:?}", now.elapsed().unwrap());
@@ -21,6 +23,7 @@ fn main() {
     println!("i64");
     let now = SystemTime::now();
     let arr_i64: Vec<i64> = (1..=1_000_000_000)
+        .into_par_iter()
         .map(|_| rand::rng().random_range(1..=1000000))
         .collect();
     println!("rand ints generated in: {:?}", now.elapsed().unwrap());
