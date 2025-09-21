@@ -23,6 +23,13 @@ fn main() {
     println!("sum: {:?}", s);
 
     println!("-----------------------------------");
+    println!("i32-i64");
+    let now = SystemTime::now();
+    let s = arr_i32.iter().cloned().map(|v| i64::from(v)).sum::<i64>();
+    println!("sum calculated in: {:?}", now.elapsed().unwrap());
+    println!("sum: {:?}", s);
+
+    println!("-----------------------------------");
     println!("i64");
     let now = SystemTime::now();
     let s = arr_i64.iter().cloned().sum::<i64>();
