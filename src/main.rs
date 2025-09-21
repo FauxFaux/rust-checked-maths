@@ -37,15 +37,10 @@ fn main() {
     println!("-----------------------------------");
     println!("i32");
     let now = SystemTime::now();
-    let s = arr_i32.clone().into_iter().checked_sum();
-    let s = if let None = s {
-        println!("overflow occurred");
-        arr_i32.into_iter().map(|x| x as i64).checked_sum()
-    } else {
-        Some(s.unwrap() as i64)
-    };
+    let s = arr_i32.into_iter().map(|x| x as i64).checked_sum();
     println!("sum calculated in: {:?}", now.elapsed().unwrap());
     println!("sum: {:?}", s);
+    println!("sum (i32): {:?}", s.and_then(|s| i32::try_from(s).ok()));
 
     println!("-----------------------------------");
     println!("i64");
