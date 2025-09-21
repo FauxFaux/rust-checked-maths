@@ -5,7 +5,7 @@ use std::time::SystemTime;
 
 fn main() {
     let now = SystemTime::now();
-    let arr_i32: Vec<i32> = (1..=1_000_000_000)
+    let arr_i32: Vec<i32> = (1..=2_000_000_000)
         .into_par_iter()
         .map(|_| rand::rng().random_range(1..=1000000))
         .collect();
